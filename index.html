@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 , maximum-scale=1"
+    />
+    <!-- maximum-scale=1" usal pois quando o usuario clica na barra de pesquisa não ira da o zoom na pagina. -->
+    <title>SnapClima</title>
+    <link rel="shortcut icon" href="/app-de-clima.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Ubuntu:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="city-search-bar">
+        <input
+          class="input"
+          id="city-search-input"
+          type="text"
+          placeholder="Temperatura de qual cidade?"
+        />
+
+        <button id="city-search-button" class="button-icon">
+          <img src="../assets/search-icon.svg" alt="Icone de pesquisa." />
+        </button>
+      </div>
+
+      <div class="current_date" id="current-date">...</div>
+      <div id="city-Name" class="city_name">...</div>
+
+
+      <form action="action">
+
+      </form>
+     
+  
+    </header>
+
+    <section class="current_temp">
+      <img
+        id="weather-icon"
+        class="current_temp_icon"
+        src="../assets/loading-icon.svg"
+        aria-hidden="true"
+        alt="Icone que ilustra a temperatura atual"
+      />
+      <!-- aria-hidden="true" , atributo para que o leitor de tela não leia o icone, pois não ah necessidade de ler literalmente o icone.  -->
+      <div id="weather-description" class="current_temp_description">...</div>
+      <div class="current_temp_info_label">Tempo Agora</div>
+      <div class="current_temp_current_temp" id="current-temp">...</div>
+    </section>
+
+    <div class="bottom-container">
+      <section class="temp_details">
+        <div class="temp_details_item">
+          <div class="temp_details_label">Vento</div>
+          <div id="wind-speed" class="temp_details_value">...</div>
+        </div>
+
+        <div class="temp_details_item">
+          <div class="temp_details_label">Sensação</div>
+          <div id="feels-like-temperature" class="temp_details_value">...</div>
+        </div>
+
+        <div class="temp_details_item">
+          <div class="temp_details_label">Umidade</div>
+          <div id="current-humidity" class="temp_details_value">...</div>
+        </div>
+      </section>
+
+      <section class="sunset_sunrise">
+        <div class="sunset_sunrise_item">
+          <img class="sunset_sunrise_icon" src="../assets/sunrise.svg"Nascer do
+          sol" />
+          <div id="sunrise-time" class="sunset_sunrise_value">...</div>
+        </div>
+
+        <div class="sunset_sunrise_item">
+          <img
+            class="sunset_sunrise_icon"
+            src="../assets/sunset.svg"
+            alt="Pôr do sol"
+          />
+          <div id="sunset-time" class="sunset_sunrise_value">...</div>
+        </div>
+      </section>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
