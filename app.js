@@ -50,7 +50,7 @@ const api_key="8fb078e4713ee69cf16ebd3cb4fcd9d6";
 function getCityWeather(cityName){
     //Inserindo wetherIcon estamos deixando ele aparecer enquanto carrega a proxima cidade, para que não mude de um vez, pois dependendo do provedor pode demorar a pesquisa.
 
-    weatherIcon.src=`../assets/loading-icon.svg`
+    weatherIcon.src=`assets/loading-icon.svg`
 
     //fectch buscar 
     /* .then = então ou seja depois que essa informação chegar faça iss */
@@ -74,7 +74,7 @@ function getCityWeather(cityName){
 
     currentDate.textContent = formatDate(dt);
     cityName.textContent=name;
-    weatherIcon.src=`../assets/${icon}.svg`
+    weatherIcon.src=`assets/${icon}.svg`
 
     weatherDescription.textContent=description;
     currenteTemp.textContent= `${Math.round(temp)}ºC`;
