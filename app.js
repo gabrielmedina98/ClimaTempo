@@ -15,11 +15,20 @@ const sunriseTime=document.getElementById('sunrise-time')
 const sunsetTime=document.getElementById('sunset-time')
 
 //addEventListener O objeto que recebe uma notificação quando um evento do tipo especificado ocorre. 
-citySearchButton.addEventListener("click", () => {
- let cityName=citySearchInput.value
- getCityWeather(cityName)
-})
 
+citySearchButton.addEventListener("click", function() {
+    cityName.textContent=citySearchInput.value
+    getCityWeather(citySearchInput.value)
+     console.log("Clicado com o mouse!");
+    })
+    
+    citySearchInput.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            cityName.textContent=citySearchInput.value
+            getCityWeather(citySearchInput.value)
+            console.log("Clicado com o enter!");
+        }
+    });
 //Apertando Enter para realizar a pesquisa
 
 /* Solicita a geolocalização do usuário */
